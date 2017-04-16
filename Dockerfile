@@ -1,4 +1,5 @@
 FROM nvidia/cuda:8.0-cudnn5-devel
+MAINTAINER Wade Schulz <wade.schulz@yale.edu>
 
 RUN apt-get update && apt-get install -y \
 				git \
