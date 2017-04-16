@@ -1,0 +1,3 @@
+root	ALL=(ALL) ALL
+%sudo   ALL=(ALL) NOPASSWD: ALL
+datasci	ALL=(ALL) NOPASSWD: ALL
