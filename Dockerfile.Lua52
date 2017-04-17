@@ -18,7 +18,7 @@ WORKDIR /home/datasci
 
 RUN git clone https://github.com/torch/distro.git ~/torch --recursive && \
 		cd ~/torch && bash install-deps && \
-		yes | ./install.sh
+		yes | TORCH_LUA_VERSION=LUA52 ./install.sh
 
 ENV PATH=/home/datasci/torch/install/bin:$PATH
 ENV LUA_PATH='/home/datasci/.luarocks/share/lua/5.1/?.lua;/home/datasci/.luarocks/share/lua/5.1/?/init.lua;/home/datasci/torch/install/share/lua/5.1/?.lua;/home/datasci/torch/install/share/lua/5.1/?/init.lua;./?.lua;/home/datasci/torch/install/share/luajit-2.1.0-beta1/?.lua;/usr/local/share/lua/5.1/?.lua;/usr/local/share/lua/5.1/?/init.lua' \
